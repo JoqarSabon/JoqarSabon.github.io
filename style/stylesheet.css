@@ -1,0 +1,105 @@
+/* Style the body */
+/*index.html, software.html & games.html body*/
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  /* Header/Logo Title */
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #11b4d1;
+    color: white;
+    font-size: 30px;
+  }
+  
+  /* Page Content */
+  .content {padding:20px;}
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #11b4d1;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #0fb87a;
+    color: white;
+  }
+
+  .float-parent-element { 
+    width: 100%; 
+} 
+.float-child-element { 
+    display: block;
+    margin: 0 auto;
+} 
+.blue { 
+    margin-top: 40px;
+    margin-left: 35%; 
+    margin-right: 35%;
+    height: 50%; 
+    margin-bottom: 2%;
+} 
+
+/*software.html*/
+
+.card {
+    margin-top: 2%;
+    margin-left: 18%;
+    margin-bottom: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    height: 550px;
+    float: left;
+    text-align: center;
+    font-family: arial;
+  }
+  
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+.card button:hover {
+    opacity: 0.7;
+  }
+
+  .h{
+    text-align: center;
+  }
+
+/*games.html*/
+
+ #image {
+    display: block; 
+    margin-top: -20px;
+    margin-left: 29%;
+    margin-bottom: 4px;
+}
