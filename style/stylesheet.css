@@ -137,3 +137,15 @@ body {
     transform: translate(-50%, -50%);
     font-size: 18px;
   }
+
+/*404.html*/
+
+ .pos{
+  margin-top: 20%;
+
+ }
+
+ .error404 {
+  text-align: center;
+  font-size: 3em;
+ }
