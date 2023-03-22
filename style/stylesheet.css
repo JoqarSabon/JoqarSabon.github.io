@@ -102,7 +102,13 @@ body {
 }
 
 /*backrooms.html*/
- 
+ .bodybackrooms{
+    background-image: url('../pictures/backrooms.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
 .topnavbackrooms {
   overflow: hidden;
   background-color: #cee409;
