@@ -96,10 +96,9 @@ body {
 /*games.html*/
 
  #image {
-    display: block; 
-    margin-top: -20px;
-    margin-left: 29%;
-    margin-bottom: 4px;
+   display: flex; 
+   justify-content: center;
+   align-items: center;
 }
 
 /*backrooms.html*/
