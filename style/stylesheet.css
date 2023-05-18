@@ -62,16 +62,21 @@ body {
 
 /*software.html*/
 
+.maincard{
+  display: flex;
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center; /* Vertikal zentrieren */
+  margin-right: 10%;
+}
+
 .card {
-    margin-top: 2%;
-    margin-left: 18%;
-    margin-bottom: 3%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 450px;
-    height: 550px;
-    float: left;
-    text-align: center;
-    font-family: arial;
+  margin-top: 2%;
+  margin-left: 12%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  height: 550px;
+  text-align: center;
+  font-family: arial;
   }
   
 .card button {
