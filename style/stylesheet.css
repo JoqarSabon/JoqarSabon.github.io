@@ -102,11 +102,6 @@ body {
    align-items: center;
 }
 
-span {
-    display:hidden;
-    visibility: hidden;
-}
-
 /*backrooms.html*/
  .bodybackrooms{
     background-image: url('../pictures/backrooms.jpg');
