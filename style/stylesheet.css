@@ -103,7 +103,7 @@ body {
 }
 
  #watermark span{
-   visibility: none;
+   display: none;
 }
 
 /*backrooms.html*/
