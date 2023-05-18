@@ -110,6 +110,10 @@ body {
     display: none;   
 }
 
+#watermark-link{
+    display: none;   
+}
+
 /*backrooms.html*/
  .bodybackrooms{
     background-image: url('../pictures/backrooms.jpg');
