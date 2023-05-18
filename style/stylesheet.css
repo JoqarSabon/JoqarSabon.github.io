@@ -106,6 +106,10 @@ body {
    display: none;
 }
 
+#watermark svg path{
+    display: none;   
+}
+
 /*backrooms.html*/
  .bodybackrooms{
     background-image: url('../pictures/backrooms.jpg');
