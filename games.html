@@ -108,8 +108,7 @@
 	<script>
 
     (function() {
-        //Initialization
-	var test = "Games";   
+        //Initialization   
 	document.title = "loading";
         var game = new gdjs.RuntimeGame(gdjs.projectData, {});
 	
@@ -121,7 +120,7 @@
 
         //Load all assets and start the game
         game.loadAllAssets(function() {
-            document.title = test;
+            document.title = "Game";
 	    game.startGameLoop();
         });
     })();
