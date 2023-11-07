@@ -109,8 +109,10 @@
 
     (function() {
         //Initialization
+	var test = "Games";   
+	document.title = "loading";
         var game = new gdjs.RuntimeGame(gdjs.projectData, {});
-
+	
         //Create a renderer
         game.getRenderer().createStandardCanvas(document.body);
 
@@ -119,7 +121,8 @@
 
         //Load all assets and start the game
         game.loadAllAssets(function() {
-            game.startGameLoop();
+            document.title = test;
+	    game.startGameLoop();
         });
     })();
 
