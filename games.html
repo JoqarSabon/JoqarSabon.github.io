@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title id="page-title">Games</title>
+    <title>Loading...</title>
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="./style/stylesheet.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -109,7 +109,6 @@
 
     (function() {
         //Initialization   
-	document.title = "loading";
         var game = new gdjs.RuntimeGame(gdjs.projectData, {});
 	
         //Create a renderer
@@ -120,7 +119,6 @@
 
         //Load all assets and start the game
         game.loadAllAssets(function() {
-            document.title = "Game";
 	    game.startGameLoop();
         });
     })();
