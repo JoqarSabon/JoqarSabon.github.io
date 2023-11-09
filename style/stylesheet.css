@@ -123,6 +123,15 @@ body {
     display: none;   
 }
 
+canvas{
+  width: 50% !important;
+  height: 50% !important;
+  position: relative !important;
+  left: 25% !important;
+  top: 25% !important;
+  z-index: 1 !important;
+}
+
  /*backrooms.html*/
  .bodybackrooms{
     background-image: url('../pictures/backrooms.jpg');
