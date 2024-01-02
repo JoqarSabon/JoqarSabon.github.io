@@ -132,6 +132,19 @@ canvas{
   z-index: 1 !important;
 }
 
+kbd {
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  color: #242729;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #fffaec;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgb(12 13 14 / 25%), 0 0 0 2px #fff inset;
+  white-space: nowrap;
+}
+
  /*backrooms.html*/
  .bodybackrooms{
     background-image: url('../pictures/backrooms.jpg');
