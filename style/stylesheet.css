@@ -187,15 +187,85 @@ kbd {
 
 /*404.html*/
 
+  .body404{
+    background-color: black;
+  }
+
  .pos{
   margin-top: 20%;
-
- }
+}
 
  .error404 {
+  animation-name: error;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: ease-in-out;
   text-align: center;
   font-size: 3em;
+  color: #fff;
  }
+
+ @keyframes error{
+  from{
+  text-shadow:
+  0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 30px rgb(255, 0, 0),
+  0 0 40px rgb(255, 0, 0),
+  0 0 50px rgb(255, 0, 0),
+  0 0 60px rgb(255, 0, 0),
+  0 0 70px rgb(255, 0, 0);
+  }
+  to{
+   text-shadow:
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px rgb(255, 0, 0, 0.802),
+    0 0 50px rgb(255, 0, 0, 0.802),
+    0 0 60px rgb(255, 0, 0, 0.802),
+    0 0 70px rgb(255, 0, 0, 0.802),
+    0 0 80px rgb(255, 0, 0, 0.802),
+  }
+ }
+
+.btn404{
+  text-align: center;
+}
+
+.text404{
+  cursor: pointer;
+  border: 3px solid;
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0);
+  border-color: #000000;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  text-shadow:
+  0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 30px rgb(255, 0, 0),
+  0 0 40px rgb(255, 0, 0),
+  0 0 50px rgb(255, 0, 0),
+  0 0 60px rgb(255, 0, 0),
+  0 0 70px rgb(255, 0, 0);
+}
+
+.text404:hover{
+  cursor: pointer;
+  border: 3px solid;
+  border-radius: 15px;
+  background-color: rgb(47, 0, 0);
+  border-color: rgb(47, 0, 0);
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+}
 
 /*stream*/
 
