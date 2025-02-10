@@ -9,6 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" type="image/png" href="./pictures/computer.png">
     <meta name="theme-color" content="#000000" />
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
     <!-- Libs and GDJS core files : -->	
 	<script src="libs/jshashtable.js" crossorigin="anonymous"></script>
@@ -104,6 +105,25 @@
       <a href="./software.html">Software</a>
       <a href="./livestream.html">Livestream</a>
       <a class="active" href="./games.html">Games</a>
+	  <a href="./monitoring.html" onclick="showAlert(); return false;">Status Page</a>
+	  <script>
+		function showAlert() {
+			Swal.fire({
+				title: "Redirect",
+				text: "You will be redirected to the UptimeRobot status page.",
+				icon: "question",
+				confirmButtonText: "Ok",
+				confirmButtonColor: "#11b4d1",
+				cancelButtonText: "No",
+				showCancelButton: true,
+				showCloseButton: true,
+			}).then((result) => {
+				if (result.isConfirmed) {
+					window.location.href = "./monitoring.html";
+				}
+			});
+		}
+	</script>  
   </div>
    <h1 class="h">Javascript game</h1>
    <p class="h">arrows <kbd>&#8592;</kbd> <kbd>&#8594;</kbd> to move<b>,</b> Space <kbd>␣</kbd> to jump</p>  
