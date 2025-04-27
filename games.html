@@ -1,149 +1,145 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>Loading...</title>
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="./style/stylesheet.css">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" type="image/png" href="./pictures/computer.png">
-    <meta name="theme-color" content="#000000" />
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
-    <!-- Libs and GDJS core files : -->	
-	<script src="libs/jshashtable.js" crossorigin="anonymous"></script>
-	<script src="title.js"></script>
-	<script src="logger.js" crossorigin="anonymous"></script>
-	<script src="gd.js" crossorigin="anonymous"></script>
-	<script src="libs/rbush.js" crossorigin="anonymous"></script>
-	<script src="AsyncTasksManager.js" crossorigin="anonymous"></script>
-	<script src="inputmanager.js" crossorigin="anonymous"></script>
-	<script src="jsonmanager.js" crossorigin="anonymous"></script>
-	<script src="timemanager.js" crossorigin="anonymous"></script>
-	<script src="polygon.js" crossorigin="anonymous"></script>
-	<script src="runtimeobject.js" crossorigin="anonymous"></script>
-	<script src="profiler.js" crossorigin="anonymous"></script>
-	<script src="RuntimeInstanceContainer.js" crossorigin="anonymous"></script>
-	<script src="runtimescene.js" crossorigin="anonymous"></script>
-	<script src="scenestack.js" crossorigin="anonymous"></script>
-	<script src="force.js" crossorigin="anonymous"></script>
-	<script src="RuntimeLayer.js" crossorigin="anonymous"></script>
-	<script src="layer.js" crossorigin="anonymous"></script>
-	<script src="RuntimeCustomObjectLayer.js" crossorigin="anonymous"></script>
-	<script src="timer.js" crossorigin="anonymous"></script>
-	<script src="runtimewatermark.js" crossorigin="anonymous"></script>
-	<script src="runtimegame.js" crossorigin="anonymous"></script>
-	<script src="variable.js" crossorigin="anonymous"></script>
-	<script src="variablescontainer.js" crossorigin="anonymous"></script>
-	<script src="oncetriggers.js" crossorigin="anonymous"></script>
-	<script src="runtimebehavior.js" crossorigin="anonymous"></script>
-	<script src="spriteruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="affinetransformation.js" crossorigin="anonymous"></script>
-	<script src="CustomRuntimeObjectInstanceContainer.js" crossorigin="anonymous"></script>
-	<script src="CustomRuntimeObject.js" crossorigin="anonymous"></script>
-	<script src="events-tools/commontools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/variabletools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/inputtools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/objecttools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/cameratools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/soundtools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/storagetools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/stringtools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/windowtools.js" crossorigin="anonymous"></script>
-	<script src="events-tools/networktools.js" crossorigin="anonymous"></script>
-	<script src="splash/gd-logo-light.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/pixi.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/pixi-filters-tools.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/runtimegame-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/runtimescene-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/layer-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/pixi-bitmapfont-manager.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/CustomObjectPixiRenderer.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/DebuggerPixiRenderer.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="pixi-renderers/pixi-effects-manager.js" crossorigin="anonymous"></script>
-	<script src="howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
-	<script src="howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
-	<script src="fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
-	<script src="fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
-	<script src="gdjs-evtsext__panelspritebutton__buttonfsm.js" crossorigin="anonymous"></script>
-	<script src="gdjs-evtsext__panelspritebutton__panelspritebutton.js" crossorigin="anonymous"></script>
-	<script src="Extensions/BitmapText/bitmaptextruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="Extensions/BitmapText/bitmaptextruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Lighting/lightobstacleruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Lighting/lightruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Lighting/lightruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PanelSpriteObject/panelspriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PanelSpriteObject/panelspriteruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PlatformBehavior/platformerobjectruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PlatformBehavior/platformruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/PlatformBehavior/platformtools.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TextObject/textruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TextObject/textruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TiledSpriteObject/tiledspriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TiledSpriteObject/tiledspriteruntimeobject.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TweenBehavior/shifty.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TweenBehavior/shifty_setup.js" crossorigin="anonymous"></script>
-	<script src="Extensions/TweenBehavior/tweenruntimebehavior.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Effects/advanced-bloom-pixi-filter.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Effects/pixi-filters/filter-advanced-bloom.js" crossorigin="anonymous"></script>
-	<script src="Extensions/Effects/pixi-filters/filter-kawase-blur.js" crossorigin="anonymous"></script>
-	<script src="code0.js" crossorigin="anonymous"></script>
-	<script src="code1.js" crossorigin="anonymous"></script>
-	<script src="code2.js" crossorigin="anonymous"></script>
-	<script src="data.js" crossorigin="anonymous"></script>
-
-
-</head>
-<body>
-  <div class="topnav">
-      <a href="./index.html">Home</a>
-      <a href="./software.html">Software</a>
-      <a href="./livestream.html">Livestream</a>
-      <a class="active" href="./games.html">Games</a>
-	  <a href="./monitoring.html" onclick="showAlert(); return false;">Status Page</a>
-	  <script>
-		function showAlert() {
-			Swal.fire({
-				title: "Redirect",
-				text: "You will be redirected to the UptimeRobot status page.",
-				icon: "question",
-				confirmButtonText: "Ok",
-				confirmButtonColor: "#11b4d1",
-				cancelButtonText: "No",
-				showCancelButton: true,
-				showCloseButton: true,
-			}).then((result) => {
-				if (result.isConfirmed) {
-					window.location.href = "./monitoring.html";
-				}
-			});
-		}
-	</script>  
-  </div>
-   <h1 class="h">Javascript game</h1>
-   <p class="h">arrows <kbd>&#8592;</kbd> <kbd>&#8594;</kbd> to move<b>,</b> Space <kbd>␣</kbd> to jump</p>  
-	<script>
-    (function() {
-        //Initialization   
-        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
-	
-        //Create a renderer
-        game.getRenderer().createStandardCanvas(document.body);
-
-        //Bind keyboards/mouse/touch events
-        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
-
-        //Load all assets and start the game
-        game.loadAllAssets(function() {
-	    game.startGameLoop();
-        });
-    })();
-
-	</script>
-</body>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Loading...</title>
+		<link rel="manifest" href="manifest.webmanifest">
+		<link rel="stylesheet" href="./style/stylesheet.css">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="icon" type="image/png" href="./pictures/computer.png">
+		<meta name="theme-color" content="#000000" />
+		<script src="libs/jshashtable.js" crossorigin="anonymous"></script>
+		<script src="title.js"></script>
+		<script src="logger.js" crossorigin="anonymous"></script>
+		<script src="gd.js" crossorigin="anonymous"></script>
+		<script src="libs/rbush.js" crossorigin="anonymous"></script>
+		<script src="AsyncTasksManager.js" crossorigin="anonymous"></script>
+		<script src="inputmanager.js" crossorigin="anonymous"></script>
+		<script src="jsonmanager.js" crossorigin="anonymous"></script>
+		<script src="timemanager.js" crossorigin="anonymous"></script>
+		<script src="polygon.js" crossorigin="anonymous"></script>
+		<script src="runtimeobject.js" crossorigin="anonymous"></script>
+		<script src="profiler.js" crossorigin="anonymous"></script>
+		<script src="RuntimeInstanceContainer.js" crossorigin="anonymous"></script>
+		<script src="runtimescene.js" crossorigin="anonymous"></script>
+		<script src="scenestack.js" crossorigin="anonymous"></script>
+		<script src="force.js" crossorigin="anonymous"></script>
+		<script src="RuntimeLayer.js" crossorigin="anonymous"></script>
+		<script src="layer.js" crossorigin="anonymous"></script>
+		<script src="RuntimeCustomObjectLayer.js" crossorigin="anonymous"></script>
+		<script src="timer.js" crossorigin="anonymous"></script>
+		<script src="runtimewatermark.js" crossorigin="anonymous"></script>
+		<script src="runtimegame.js" crossorigin="anonymous"></script>
+		<script src="variable.js" crossorigin="anonymous"></script>
+		<script src="variablescontainer.js" crossorigin="anonymous"></script>
+		<script src="oncetriggers.js" crossorigin="anonymous"></script>
+		<script src="runtimebehavior.js" crossorigin="anonymous"></script>
+		<script src="spriteruntimeobject.js" crossorigin="anonymous"></script>
+		<script src="affinetransformation.js" crossorigin="anonymous"></script>
+		<script src="CustomRuntimeObjectInstanceContainer.js" crossorigin="anonymous"></script>
+		<script src="CustomRuntimeObject.js" crossorigin="anonymous"></script>
+		<script src="events-tools/commontools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/variabletools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/inputtools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/objecttools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/cameratools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/soundtools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/storagetools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/stringtools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/windowtools.js" crossorigin="anonymous"></script>
+		<script src="events-tools/networktools.js" crossorigin="anonymous"></script>
+		<script src="splash/gd-logo-light.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/pixi.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/pixi-filters-tools.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/runtimegame-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/runtimescene-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/layer-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/pixi-bitmapfont-manager.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/CustomObjectPixiRenderer.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/DebuggerPixiRenderer.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="pixi-renderers/pixi-effects-manager.js" crossorigin="anonymous"></script>
+		<script src="howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
+		<script src="howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
+		<script src="fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
+		<script src="fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
+		<script src="gdjs-evtsext__panelspritebutton__buttonfsm.js" crossorigin="anonymous"></script>
+		<script src="gdjs-evtsext__panelspritebutton__panelspritebutton.js" crossorigin="anonymous"></script>
+		<script src="Extensions/BitmapText/bitmaptextruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="Extensions/BitmapText/bitmaptextruntimeobject.js" crossorigin="anonymous"></script>
+		<script src="Extensions/Lighting/lightobstacleruntimebehavior.js" crossorigin="anonymous"></script>
+		<script src="Extensions/Lighting/lightruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="Extensions/Lighting/lightruntimeobject.js" crossorigin="anonymous"></script>
+		<script src="Extensions/PanelSpriteObject/panelspriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="Extensions/PanelSpriteObject/panelspriteruntimeobject.js" crossorigin="anonymous"></script>
+		<script src="Extensions/PlatformBehavior/platformerobjectruntimebehavior.js" crossorigin="anonymous"></script>
+		<script src="Extensions/PlatformBehavior/platformruntimebehavior.js" crossorigin="anonymous"></script>
+		<script src="Extensions/PlatformBehavior/platformtools.js" crossorigin="anonymous"></script>
+		<script src="Extensions/TextObject/textruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="Extensions/TextObject/textruntimeobject.js" crossorigin="anonymous"></script>
+		<script src="Extensions/TiledSpriteObject/tiledspriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+		<script src="Extensions/TiledSpriteObject/tiledspriteruntimeobject.js" crossorigin="anonymous"></script>
+		<script src="Extensions/TweenBehavior/shifty.js" crossorigin="anonymous"></script>
+		<script src="Extensions/TweenBehavior/shifty_setup.js" crossorigin="anonymous"></script>
+		<script src="Extensions/TweenBehavior/tweenruntimebehavior.js" crossorigin="anonymous"></script>
+		<script src="Extensions/Effects/advanced-bloom-pixi-filter.js" crossorigin="anonymous"></script>
+		<script src="Extensions/Effects/pixi-filters/filter-advanced-bloom.js" crossorigin="anonymous"></script>
+		<script src="Extensions/Effects/pixi-filters/filter-kawase-blur.js" crossorigin="anonymous"></script>
+		<script src="code0.js" crossorigin="anonymous"></script>
+		<script src="code1.js" crossorigin="anonymous"></script>
+		<script src="code2.js" crossorigin="anonymous"></script>
+		<script src="data.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="custom.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<ul class="navbar-nav mr-auto">
+				<li class="nav-item" active><a class="nav-link" href="./index.html">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="./software.html">Software</a></li>
+				<li class="nav-item"><a class="nav-link" href="./livestream.html">Livestream</a></li>
+				<li class="nav-item active"><a class="nav-link" href="./games.html">Games</a></li>
+				<li class="nav-item"><a class="nav-link" href="./monitoring.html" onclick="showAlert(); return false;">Status Page</a></li>
+				</ul>
+			</div>
+		</nav>  
+	</div>
+	<div class="container text-center my-5 d-none d-lg-block">
+		<h1 class="mb-3">🎮 Javascript game</h1>
+		<p class="lead text-muted">
+			arrows <kbd>&#8592;</kbd> <kbd>&#8594;</kbd> to move<b>,</b> Space <kbd style="display: inline-block; width:30px; text-align: center;letter-spacing: 2px;">␣</kbd> to jump</p>  
+			<script>
+				(function() {
+					if (window.innerWidth >= 992) { 
+						var game = new gdjs.RuntimeGame(gdjs.projectData, {});
+						game.getRenderer().createStandardCanvas(document.body);
+						game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+						game.loadAllAssets(function() {
+							game.startGameLoop();
+						});
+					} else {
+						console.log("Game will not start on small devices.");
+					}
+				})();
+			</script>
+	</div>
+	<div class="container text-center my-5 d-block d-lg-none">
+		<h1 class="mb-3">🎮 Game available for PC</h1>
+		<p class="lead text-muted">Please use PC for the best experience!</p>  
+	</div>
+	</body>
 </html>
